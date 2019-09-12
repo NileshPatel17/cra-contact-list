@@ -3,14 +3,29 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@types/jest": "^24.0.18",
+    "@types/node": "^12.7.4",
+    "@types/react": "^16.9.2",
+    "@types/react-dom": "^16.9.0",
+    "@types/yup": "^0.26.23",
+    "formik": "^1.5.8",
     "react": "^16.9.0",
     "react-dom": "^16.9.0",
-    "react-scripts": "3.1.1"
+    "react-scripts": "3.1.1",
+    "tailwindcss": "^1.1.2",
+    "typescript": "^3.6.2",
+    "yup": "^0.27.0"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
+    "start": "concurrently \"yarn run start:twd\" \"yarn run start:cra\"",
+    "build": "yarn run build:twd && yarn run build:cra",
+    "start:cra": "react-scripts start",
+    "build:cra": "react-scripts build",
+    "start:twd": "postcss ./src/styles/tailwind.pcss -o ./src/styles/tailwind.css --watch",
+    "build:twd": "postcss ./src/styles/tailwind.pcss -o ./src/styles/tailwind.css --env production",
     "test": "react-scripts test",
+    "cy:open":"cypress open",
+    "cy:run":"cypress run",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
@@ -27,5 +42,11 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "autoprefixer": "^9.6.1",
+    "concurrently": "^4.1.2",
+    "cypress": "^3.4.1",
+    "postcss-cli": "^6.1.3"
   }
 }
