@@ -48,9 +48,9 @@ export const ContactForm: React.SFC<IContactFormProps> = (
         props.onAddContact(values);
       }}
       render={(formikBag: FormikProps<IContact>) => (
-        <form onSubmit={formikBag.handleSubmit} className="w-full max-w-lg">
-          <div className="font-bold text-xl mb-2" data-test='data-new-contact'>Create New Contact</div>
-          <div className="flex flex-wrap content-center">
+        <form onSubmit={formikBag.handleSubmit} className="w-full max-w-lg border border-blue400 border-round m-4 p-4">
+          <div className="font-bold text-xl mb-2 ml-2" data-test='data-new-contact'>Create New Contact</div>
+          <div className="flex flex-wrap w-700">
             <div className="w-full lg:w-1/2 px-3 mb-6 md:mb-0">
               <label
                 htmlFor="firstName"

@@ -8,7 +8,6 @@ const defaultContactList: IContact[] = [];
 function App() {
   const [createNewContact, setCreateNewContact] = useState(false);
   const [contactList, setContactList] = useState(defaultContactList);
-  console.log('TCL: App -> contactList', contactList);
   const onAddContact = (formData: IContact) => {
     const totalContacts = contactList.length;
     formData.id = totalContacts + 1;
