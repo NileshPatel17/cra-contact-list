@@ -65,7 +65,7 @@ export const ContactForm: React.SFC<IContactFormProps> = (
                     <input
                       name="firstName"
                       data-test="input-firstName"
-                      className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline border-blue-300 "
+                      className="input__textbox"
                       placeholder="First Name"
                       {...field}
                     />
@@ -92,7 +92,7 @@ export const ContactForm: React.SFC<IContactFormProps> = (
                     <input
                       name="lastName"
                       data-test="input-lastName"
-                      className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline border-blue-300 "
+                      className="input__textbox"
                       placeholder="Last Name"
                       {...field}
                     />
@@ -153,7 +153,7 @@ export const ContactForm: React.SFC<IContactFormProps> = (
                     <input
                       name="email"
                       data-test="input-email"
-                      className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline border-blue-300 "
+                      className="input__textbox"
                       placeholder="Email"
                       {...field}
                     />
@@ -180,7 +180,7 @@ export const ContactForm: React.SFC<IContactFormProps> = (
                     <input
                       name="phone"
                       data-test="input-phone"
-                      className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline border-blue-300 "
+                      className="input__textbox"
                       placeholder="Phone"
                       {...field}
                     />
@@ -207,7 +207,7 @@ export const ContactForm: React.SFC<IContactFormProps> = (
                     <textarea
                       name="address"
                       data-test="input-address"
-                      className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline border-blue-300 "
+                      className="input__textbox"
                       placeholder="Address"
                       {...field}
                     />
@@ -222,7 +222,7 @@ export const ContactForm: React.SFC<IContactFormProps> = (
             </div>
             <div className="w-full lg:w-2/3 px-3 mb-6 md:mb-0">
               <label
-                htmlFor="email"
+                htmlFor="getCallback"
                 className="text-sm block font-bold pt-2 pb-2"
               >
                 Would like to get callback
