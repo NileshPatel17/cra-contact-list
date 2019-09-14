@@ -10,7 +10,7 @@ const contactFormSchema = () => {
     email: Yup.string()
       .required('required')
       .email('Email is not valid'),
-    gender: Yup.mixed<'male' | 'female'>().oneOf(['male', 'female']),
+    gender: Yup.mixed<'male' | 'female'>().oneOf(['male', 'female']).required('required'),
     phone: Yup.string()
       .required('required')
       .matches(/^\d{10}$/, {
@@ -50,7 +50,7 @@ export const ContactForm: React.SFC<IContactFormProps> = (
       render={(formikBag: FormikProps<IContact>) => (
         <form onSubmit={formikBag.handleSubmit} className="w-full max-w-lg border border-blue400 border-round m-4 p-4">
           <div className="font-bold text-xl mb-2 ml-2" data-test='data-new-contact'>Create New Contact</div>
-          <div className="flex flex-wrap w-700">
+          <div className="flex flex-wrap">
             <div className="w-full lg:w-1/2 px-3 mb-6 md:mb-0">
               <label
                 htmlFor="firstName"
